@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html>
-  <head>
-  </head>
-  <body>
-    Enter your name: <input type="text" id="fname">
-	
-	<script type="text/javascript" src="./script.js">
-	</script>
-  </body>
+<head>
+</head>
+<body>
+  Enter your name: <input type="text" id="fname" onblur="capitalizeOnBlur()">
+  
+  <script>
+    // Function to convert input value to uppercase on blur
+    function capitalizeOnBlur() {
+      const inputField = document.getElementById('fname');
+      inputField.value = inputField.value.toUpperCase();
+    }
+  </script>
+</body>
 </html>
